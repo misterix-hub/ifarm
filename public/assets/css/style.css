@@ -1,0 +1,15 @@
+.update-input {
+    border: none;
+    outline: none;
+    background: none;
+}
+.update-btn, .close-input {
+    display: none;
+}
+
+/* TO REMOVE */
+.form-control {
+    border: 1px solid #CCC;
+}
+
+/*! TO REMOVE*/
