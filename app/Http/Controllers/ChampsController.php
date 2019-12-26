@@ -121,4 +121,16 @@ class ChampsController extends Controller
 
         return back()->with('success', "Champs supprimé avec succès !");
     }
+
+    public function map($id) {
+        $champs = Champs::where('id', $id)->get();
+
+        foreach ($champs as $champ) {
+            $map = $champ->addresse_map;
+        }
+
+        return view('champs.map', [
+            'map' => $map
+        ]);
+    }
 }

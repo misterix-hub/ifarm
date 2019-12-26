@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Modeles\Semence;
+use App\Modeles\Engrais;
+use App\Modeles\Insecticide;
+use App\Modeles\SemenceInsceticide;
+use App\Modeles\SemenceEngrais;
 
 class SemenceController extends Controller
 {
@@ -35,9 +39,11 @@ class SemenceController extends Controller
      */
     public function store(Request $request)
     {
-        /*$aujourdhui = date('Y-m-d');
-        
-        return date('Y-m-d', strtotime("$aujourdhui +1 month"));*/
+        $engrais = Engrais::leftJoin('semence_engrais', 'engrais.id', 'engrais_id')
+                            ->where('semence_id', $request->semence)->get();
+
+        $insecticides = Insecticide::leftJoin('semence_insecticides', 'insecticides.id', 'insecticide_id')
+                            ->where('semence_id', $request->semence)->get();
 
         $semences = Semence::where('id', $request->semence)->get();
 
@@ -47,12 +53,22 @@ class SemenceController extends Controller
             $temp_de_rendement = $semence->temp_de_rendement;
         }
 
+        $aujourdhui = date('Y-m-d');
+        $mois = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre",
+                    "Octobre", "Novembre", "Décembre"];
+
         return view('semences.create', [
+            'engrais' => $engrais,
+            'insecticides' => $insecticides,
             'champs' => $request->champs,
+            'nom' => $nom,
             'kilo_par_metre' => $kilo_par_metre,
             'temp_de_rendement' => $temp_de_rendement,
-            'ecart' => $request->ecart,
-            'aujourdhui' => date('Y-m-d'),
+            'largeur' => $request->largeur,
+            'distance' => $request->distance,
+            'aujourdhui' => $aujourdhui,
+            'mois' => $mois,
+            'date_recolte' => date('Y-m-d', strtotime("$aujourdhui + " . $temp_de_rendement . " day"))
         ]);
     }
 

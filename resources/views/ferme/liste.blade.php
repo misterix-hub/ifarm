@@ -1,6 +1,14 @@
-@extends('layouts.header')
+@extends('layouts.leftSideBar')
 
 @section('content')
+
+    <div>
+        <div class="font-weight-bold p-3">
+            <span>Ifarm</span>
+        </div>
+    </div>
+
+
     <h1>Index</h1>
 
     @forelse ($fermes as $ferme)
@@ -58,6 +66,10 @@
             Ajouter
         </button>
     </form>
+
+    <button class="btn btn-green rounded-circle float-btn">
+        <i class="icofont-plus"></i>
+    </button>
 
 @endsection
 

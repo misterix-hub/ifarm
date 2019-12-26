@@ -7,9 +7,68 @@
     display: none;
 }
 
+.font-size-13 {
+    font-size: 13px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
 /* TO REMOVE */
 .form-control {
     border: 1px solid #CCC;
 }
 
 /*! TO REMOVE*/
+
+.left-side-bar {
+    background-color: #207c26;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 18%;
+    overflow: auto;
+}
+.wrappable-content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 82%;
+}
+
+.float-btn {
+    padding: 20px !important;
+    position: fixed !important;
+    bottom: 20px;
+    right: 20px;
+}
+
+.menu-item ul {
+    line-height: 30px;
+}
+
+.menu-item ul li a {
+    color: #FFF;
+    font-family: Poiret_one;
+    font-weight: 300;
+}
+
+.menu-item ul li a div {
+    padding: 4px 0;
+}
+
+.menu-item ul li a div:hover {
+    background-color: #145f19;
+}
+
+.menu-item ul li a i {
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: Poiret_one;
+    src: url(../../fonts/Poiret_One/PoiretOne-Regular.ttf);
+}

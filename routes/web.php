@@ -31,6 +31,8 @@ Route::get('champs/{id}/modifier', 'ChampsController@edit')->name('editChamps');
 Route::post('champs/{id}/modifier', 'ChampsController@update')->name('updateChamps');
 Route::get('champs/{id}/supprimer', 'ChampsController@destroy')->name('destroychamps');
 
+Route::get('maps/{id}', 'ChampsController@map')->name('maps');
+
 /* SEMENCE */
 
 Route::get('semences/{id}/editer', 'SemenceController@edit')->name('editSemence');

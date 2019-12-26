@@ -408,6 +408,7 @@ class ComposerStaticInite655b71a73c93bb612387258f2eb8f1e
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Engrais' => __DIR__ . '/../..' . '/app/Engrais.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -427,6 +428,7 @@ class ComposerStaticInite655b71a73c93bb612387258f2eb8f1e
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Insecticide' => __DIR__ . '/../..' . '/app/Insecticide.php',
         'App\\Modeles\\Champs' => __DIR__ . '/../..' . '/app/Modeles/Champs.php',
         'App\\Modeles\\Ferme' => __DIR__ . '/../..' . '/app/Modeles/Ferme.php',
         'App\\Modeles\\Semence' => __DIR__ . '/../..' . '/app/Modeles/Semence.php',
@@ -435,6 +437,8 @@ class ComposerStaticInite655b71a73c93bb612387258f2eb8f1e
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\SemenceEngrais' => __DIR__ . '/../..' . '/app/SemenceEngrais.php',
+        'App\\SemenceInsecticide' => __DIR__ . '/../..' . '/app/SemenceInsecticide.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
